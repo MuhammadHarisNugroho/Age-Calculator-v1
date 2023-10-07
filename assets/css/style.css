@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Timmana&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #662549 50%, #5C5470 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255);
+  border-radius: 6px;
+  box-shadow: 0 8px 20px rgb(0, 255, 213, 0.5);
+  animation: shadow-color 1s linear infinite;
+}
+
+.container * {
+  border: none;
+  outline: none;
+}
+
+.input-wrapper {
+  margin-bottom: 20px;
+  display: grid;
+  gap: 10px;
+}
+
+input[type="date"],
+input,
+button {
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s;
+}
+
+input[type="date"] {
+  background-color: #f4f4f4;
+}
+
+input:focus,
+button:focus,
+input[type="date"]:focus {
+  border-color: #55d0f0;
+}
+
+button {
+  color: #fff;
+  background-color: #14141c;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #1a1a28;
+}
+
+.output-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.output-wrapper div {
+  flex-basis: calc(50% - 20px);
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding: 20px;
+  margin: 10px;
+}
+
+@keyframes shadow-color {
+  0% {
+    box-shadow: 0 5px 15px rgb(60, 255, 0, 0.7);
+  }
+  25% {
+    box-shadow: 0 5px 15px rgb(255, 230, 0, 0.7);
+  }
+  50% {
+    box-shadow: 0 5px 15px rgb(255, 0, 0, 0.7);
+  }
+  75% {
+    box-shadow: 0 5px 15px rgba(0, 0, 255, 0.7);
+  }
+  100% {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+  }
+}
+
+span {
+  display: block;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #141414;
+  margin-bottom: 5px;
+}
+
+p {
+  font-size: 0.87em;
+  color: #707070;
+  font-weight: 400;
+}
+
+.user .made {
+  margin-top: 5px;
+  font-size: 0.87em;
+  font-weight: bold;
+  color: #27005d;
+}
+
+.ig {
+  margin-bottom: -15px;
+  font-size: 1.2em;
+  color: #0b666a;
+  font-family: "Timmana", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .output-wrapper div {
+    flex-basis: calc(100% - 20px);
+  }
+}
